@@ -3,16 +3,13 @@
     "builds": [
       {
         "src": "package.json",
-        "use": "@vercel/node",
-        "config": {
-        "includeFiles": ["node_modules/.prisma/**/*"]
-      }
+        "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "src/main.ts",
+        "dest": "/dist/main.js",
         "methods": [
           "GET",
           "POST",
